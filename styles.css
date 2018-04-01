@@ -1,0 +1,135 @@
+@import('reset.css');
+
+html {
+  font-family: 'Inconsolata', monospace;
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  
+  background: linear-gradient(-45deg, #ba7074, #d9c0dd, #f8f4b6, #b9bc1c);
+  background-size: 800% 800%;
+
+  -webkit-animation: GradientAnimation 20s ease infinite;
+  -moz-animation: GradientAnimation 20 ease infinite;
+  animation: GradientAnimation 20 ease infinite;
+}
+@-webkit-keyframes GradientAnimation {
+    0%{background-position:14% 0%}
+    50%{background-position:87% 100%}
+    100%{background-position:14% 0%}
+}
+@-moz-keyframes GradientAnimation {
+    0%{background-position:14% 0%}
+    50%{background-position:87% 100%}
+    100%{background-position:14% 0%}
+}
+@keyframes GradientAnimation { 
+    0%{background-position:14% 0%}
+    50%{background-position:87% 100%}
+    100%{background-position:14% 0%}
+}
+
+a {
+  font-weight: normal;
+  color: #fff;
+}
+sup {
+  font-size: 50%;
+}
+p {
+  margin: 0;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+body > div {
+  display: inline-block;
+  border-radius: 5px;
+  background: rgba(68,200,223,0.8);
+  line-height: 1.25rem;
+}
+body > div > img {
+  height: 1em;
+}
+.handle {
+  display: block;
+  border-bottom: 1px solid #fff;
+  cursor: move;
+  height: 12px;
+  line-height: 12px;
+  text-align: center;
+}
+.handle > img {
+  display: inline-block;
+  height: 7px;
+  vertical-align: middle;
+}
+
+
+.BC18_tagline > img {
+  padding: 19px 33px;
+  height: 26px;
+}
+.aiganebraska > img {
+  padding: 28px 33px;
+  height: 115px;
+}
+.BC18_logo_a > img {
+  height: 136px;
+  padding: 54px 64px;
+}
+.BC18_logo_b_18 {
+  background: url('img/18_bg.png') no-repeat center center;
+  background-size: cover;
+}
+.BC18_logo_b_18 > img {
+  padding: 104px 95.5px;
+  height: 178px;
+}
+.BC18_logo_b_bc {
+  background: url('img/bc_bg.png') no-repeat center center;
+  background-size: cover;
+}
+.BC18_logo_b_bc > img {
+  padding: 105px 74px;
+  height: 177px;
+}
+.BC18_date {
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: .15em;
+}
+.BC18_date > p {
+  padding-top: 20px;
+  padding-bottom: 15px;
+  padding-right: 29.5px;
+  padding-left: 29.5px;
+}
+.BC18_date > img {
+  height: 28px;
+  padding-bottom: 20px;
+  padding-right: 29.5px;
+  padding-left: 29.5px;
+}
+.note, .past_websites {
+  letter-spacing: .15rem;
+}
+.note p:nth-of-type(2) {
+  padding: 1rem 0;
+}
+.note > div {
+  padding: 23px;
+}
+.past_websites p {
+  padding: 17px 13px 1rem 13px;
+}
+.past_websites ul {
+  padding: 0 13px 13px 13px;
+}
