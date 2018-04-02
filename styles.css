@@ -12,10 +12,11 @@ html {
   
   background: linear-gradient(-45deg, #ba7074, #d9c0dd, #f8f4b6, #b9bc1c);
   background-size: 800% 800%;
+  background-attachment: fixed;
 
   -webkit-animation: GradientAnimation 20s ease infinite;
-  -moz-animation: GradientAnimation 20 ease infinite;
-  animation: GradientAnimation 20 ease infinite;
+  -moz-animation: GradientAnimation 20s ease infinite;
+  animation: GradientAnimation 20s ease infinite;
 }
 @-webkit-keyframes GradientAnimation {
     0%{background-position:14% 0%}
@@ -52,7 +53,7 @@ ul {
 body > div {
   display: inline-block;
   border-radius: 5px;
-  background: rgba(68,200,223,0.8);
+  background: rgba(0,234,244,0.8);
   line-height: 1.25rem;
 }
 body > div > img {
@@ -62,13 +63,13 @@ body > div > img {
   display: block;
   border-bottom: 1px solid #fff;
   cursor: move;
-  height: 12px;
-  line-height: 12px;
+  height: 25px;
+  line-height: 25px;
   text-align: center;
 }
 .handle > img {
   display: inline-block;
-  height: 7px;
+  height: 15px;
   vertical-align: middle;
 }
 
@@ -81,13 +82,17 @@ body > div > img {
   padding: 28px 33px;
   height: 115px;
 }
+.BC18_logo_a {
+  z-index: 1;
+}
 .BC18_logo_a > img {
-  height: 136px;
-  padding: 54px 64px;
+  height: 180px;
+  padding: 25px 63px;
 }
 .BC18_logo_b_18 {
   background: url('img/18_bg.png') no-repeat center center;
   background-size: cover;
+  z-index: -1;
 }
 .BC18_logo_b_18 > img {
   padding: 104px 95.5px;
@@ -96,6 +101,7 @@ body > div > img {
 .BC18_logo_b_bc {
   background: url('img/bc_bg.png') no-repeat center center;
   background-size: cover;
+  z-index: -1;
 }
 .BC18_logo_b_bc > img {
   padding: 105px 74px;
@@ -132,4 +138,49 @@ body > div > img {
 }
 .past_websites ul {
   padding: 0 13px 13px 13px;
+}
+.moved {
+  right: auto !important;
+}
+
+@media all and (max-width: 768px) {
+  html {
+    overflow: auto;
+  }
+  .handle {
+    cursor: default;
+    height: 18px;
+    line-height: 18px;
+  }
+  .handle > img {
+    height: 12px;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  body > div {
+    position: static;
+    overflow: hidden;
+    margin-bottom: 5px;
+  }
+  .BC18_logo_b_bc,
+  .BC18_logo_b_18,
+  .BC18_logo_a + .aiganebraska {
+    display: none;
+  }
+  .BC18_logo_a {
+    text-align: center;
+  }
+  .BC18_logo_a > img {
+    padding: 5% 0;
+    width: 90%;
+  }
+  .aiganebraska {
+    order: 9;
+    text-align: center;
+  }
+  .BC18_tagline {
+    text-align: center;
+  }
 }
