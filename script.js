@@ -9,6 +9,12 @@ function init(e) {
   
   var draggableElems = document.querySelectorAll('.drag');
   var draggies = [];
+  var editor = document.querySelector('[contenteditable]');
+  editor.addEventListener('click', function(e) {
+    if (e.target.tagName == 'A') {
+      window.open(e.target.getAttribute('href'));
+    }
+  });
 
   // MOBILE
   if (window && window.outerWidth <= 768) {
@@ -23,7 +29,7 @@ function init(e) {
       
     }
     // Disable notepad editing on mobile
-    document.querySelector('[contenteditable]').setAttribute('contenteditable', false);
+    editor.setAttribute('contenteditable', false);
   }
 
   // NOT MOBILE
@@ -35,7 +41,7 @@ function init(e) {
         draggableElems[i].setAttribute('style',backup);
       }
       // enable editing
-      document.querySelector('[contenteditable]').setAttribute('contenteditable', true);
+      editor.setAttribute('contenteditable', true);
 
       var draggableElem = draggableElems[i];
       var draggie = new Draggabilly( draggableElem, {

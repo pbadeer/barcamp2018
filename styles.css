@@ -143,7 +143,23 @@ body > div > img {
   right: auto !important;
 }
 
+.mobile-only {
+  display: none;
+}
 @media all and (max-width: 768px) {
+  .mobile-only {
+    display: inherit;
+  }
+  .row {
+    flex-direction: row;
+    background: none;
+  }
+  .row > div {
+    flex-grow: 1;
+    margin: 0 2.5px;
+    border-radius: 5px;
+    background: rgba(0,234,244,0.8);
+  }
   html {
     overflow: auto;
   }
@@ -166,7 +182,7 @@ body > div > img {
   }
   .BC18_logo_b_bc,
   .BC18_logo_b_18,
-  .BC18_logo_a + .aiganebraska {
+  body > .aiganebraska {
     display: none;
   }
   .BC18_logo_a {
@@ -177,7 +193,6 @@ body > div > img {
     width: 90%;
   }
   .aiganebraska {
-    order: 9;
     text-align: center;
   }
   .BC18_tagline {
