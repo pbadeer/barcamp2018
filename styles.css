@@ -172,6 +172,7 @@ body > div > img {
   .bc18_lettermark_a,
   .bc18_lettermark_b,
   .egg,
+  br,
   body > .aiganebraska {
     display: none;
   }
@@ -187,5 +188,8 @@ body > div > img {
   }
   .bc18_tagline {
     text-align: center;
+  }
+  .bc18_tagline > img {
+    padding: 19px 0;
   }
 }

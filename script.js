@@ -19,11 +19,6 @@ function init(e) {
   var draggableElems = document.querySelectorAll('.drag');
   var draggies = [];
   var editor = document.querySelector('[contenteditable]');
-  editor.addEventListener('click', function(e) {
-    if (e.target.tagName == 'A') {
-      window.open(e.target.getAttribute('href'));
-    }
-  });
 
   // MOBILE
   if (window && window.outerWidth <= 768) {
@@ -43,6 +38,12 @@ function init(e) {
 
   // NOT MOBILE
   else {
+    // Keep links clickable despite editable note
+    editor.addEventListener('click', function(e) {
+      if (e.target.tagName == 'A') {
+        window.open(e.target.getAttribute('href'));
+      }
+    });
     // Make windows draggable if not mobile
     for ( var i=0; i < draggableElems.length; i++ ) {
       var backup = draggableElems[i].dataset.style;
