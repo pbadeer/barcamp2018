@@ -2,6 +2,15 @@ window.addEventListener("load", init);
 window.addEventListener("resize", init);
 
 function init(e) {
+  document.querySelectorAll('.bc18_lettermark_a, .bc18_lettermark_b')
+    .forEach(function(elem) {
+      elem.addEventListener('mouseover', function(){
+        document.querySelectorAll('.egg').forEach(function(elem) {
+          elem.classList.add('expand');
+        });
+      });
+  });
+
   function findAncestor (el, sel) {
     while ((el = el.parentElement) && !((el.matches || el.matchesSelector).call(el,sel)));
     return el;
