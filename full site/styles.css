@@ -44,7 +44,6 @@
 }
 
 
-
 html {
   font-family: 'MAD Sans Fill', sans-serif;
   font-weight: bold;
@@ -59,6 +58,7 @@ a {
   font-weight: normal;
   color: #001718;
   text-decoration: none;
+  cursor: pointer;
 }
 sup {
   font-size: 50%;
@@ -72,11 +72,12 @@ ul {
   margin: 0;
 }
 
-.drag {
+.drag, .nodrag {
   display: inline-block;
   border-radius: 5px;
   background: rgba(0,213,222,0.95);
   padding-top: 19px;
+  position: absolute;
 }
 .dot {
   float: left;
@@ -84,12 +85,11 @@ ul {
   padding-left: 6px;
   padding-top: 1px;
 }
-.handle {
-  border-bottom: 0.5px solid #001718;
+.handle, .nohandle {
+  border-bottom: 1px solid #001718;
   cursor: move;
   height: 18px;
   line-height: 18px;
-
   font-family: 'MAD Sans Fill', sans-serif;
   text-align: center;
   font-size: 16px;
@@ -97,6 +97,9 @@ ul {
   width: 100%;
   top: 0;
   left: 0;
+}
+.nohandle {
+  cursor: default;
 }
 .handle > img {
   display: inline-block;
@@ -111,25 +114,46 @@ ul {
 }
 
 
+.hidden {
+  opacity: 0;
+  top: -100vh;
+  left: 50%;
+  transform: translate(-50%, 0);
+  transition: opacity 1s ease, top 1s ease;
+}
 
 
 .notes {
   line-height: 1.25rem;
   font-weight: normal;
+  display: flex;
+  max-height: 350px;
+  max-width: 539px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  padding: 71px 31px;
+}
+.notes img {
+  width: 7px;
+}
+.notes p {
+  margin-top: 1em;
+  font-family: 'Inconsolata', monospace;
+  font-weight: normal;
+  font-size: 16px;
+}
+.notes > div {
+  flex-basis: 250px;
+  overflow-y: scroll;
 }
 .notes li {
   font-size: 18px;
-}
-.notes ul {
-  padding: 71px 93px 71px 31px;
-  background: url('img/notes_bg.svg') 83% center no-repeat;
-  background-size: 6px 166px;
 }
 
 
 .about {
   display: inline-block;
-  background: rgba(0,213,222,0.95) url('img/about-bg2.svg') no-repeat;
+  background: url('img/about-bg2.svg') no-repeat;
   background-size: cover;
   padding: 31px 18px 16px 24px;
 }
@@ -184,7 +208,7 @@ ul {
   font-weight: bold;
   font-style: italic;
   font-size: 20px;
-  padding-top: 20px;
+  padding-top: 130px;
   padding-left: 37px;
 }
 .track p {
@@ -201,16 +225,37 @@ ul {
 
 .tray {
   position: fixed;
-  width: 95%;
   bottom: 0;
-  left: 2.5%;
+  width: 973px;
   background: url('img/tray-bg.svg') no-repeat center top;
-  padding-top: 82px;
+  padding-top: 70px;
   text-align: center;
-  background-size: cover;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 .tray > img {
   width: 290px;
+  margin-left: 47px;
+}
+.tray .top {
+  display: block;
+  text-align: right;
+  margin: 0 9%;
+  line-height: 24px;
+  height: 24px;
+  padding-bottom: 98px;
+}
+.tray .clock {
+  font-family: 'Inconsolata', monospace;
+  font-size: 16px;
+  float: left;
+}
+.tray .top > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+.tray .search {
+  margin-right: 18px;
 }
 .tray .wifi img {
   width: 31px;
@@ -227,6 +272,10 @@ ul {
 .tray .folders img {
   width: 90px;
   padding-bottom: 5px;
+}
+.tray .apps {
+  padding-top: 35px;
+  padding-bottom: 66px;
 }
 .tray .apps li {
   background: #00EAF4;
