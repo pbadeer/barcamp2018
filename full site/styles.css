@@ -43,6 +43,11 @@
     font-style: normal;
 }
 
+@keyframes movein {
+  from {bottom: -100%;}
+  to {bottom: 0;}
+}
+
 
 html {
   font-family: 'MAD Sans Fill', sans-serif;
@@ -106,9 +111,6 @@ ul {
   height: 15px;
   vertical-align: middle;
 }
-/*.moved {
-  right: auto !important;
-}*/
 .mobile-only {
   display: none;
 }
@@ -119,7 +121,20 @@ ul {
   top: -100vh;
   left: 50%;
   transform: translate(-50%, 0);
-  transition: opacity 1s ease, top 1s ease;
+  transition: opacity 1s ease-in-out, top 1s ease-in-out;
+}
+
+
+.sleep {
+  background: url('img/sleep.svg') center bottom;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: -150%;
+  left: 0;
+  z-index: 9999;
+  transition: top 3s ease-in-out;
 }
 
 
@@ -232,6 +247,8 @@ ul {
   text-align: center;
   left: 50%;
   transform: translate(-50%, 0);
+  animation: movein 3s ease-in-out;
+  animation-iteration-count: 1;
 }
 .tray > img {
   width: 290px;

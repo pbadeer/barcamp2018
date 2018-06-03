@@ -23,10 +23,19 @@ function checkTime(i) {
 }
 
 function openWindow (a) {
-  var b = document.querySelectorAll('.' + a)[0];
+  var b = document.querySelector('.' + a);
   b.style.top = '25vh';
   b.style.opacity = 1;
   b.style.transform = '';
+}
+
+function unsleepMe(){
+  var b = document.querySelector('.sleep');
+  b.style.top = '-150%';
+}
+function sleepMe () {
+  var b = document.querySelector('.sleep');
+  b.style.top = '0';
 }
 
 function init(e) {
