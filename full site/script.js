@@ -37,9 +37,9 @@ function init(e) {
       var draggie = new Draggabilly( draggableElem, {
         handle: '.handle'
       });
-      draggie.on('dragStart', function(event, pointer) {
-        findAncestor(event.target, ".drag").classList.add('moved');
-      });
+      // draggie.on('dragStart', function(event, pointer) {
+      //   findAncestor(event.target, ".drag").classList.add('moved');
+      // });
       draggies.push( draggie );
     }
   }
