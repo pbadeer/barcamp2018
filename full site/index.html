@@ -14,14 +14,14 @@
   <body>
     <div class="sleep" onclick="unsleepMe()"></div>
 
-    <div class="about drag">
+<!--     <div class="about drag">
       <img src="img/about-logo.svg" alt="BarCamp Omaha">
       <ul>
         <li><a onclick="openWindow('aboutthis')">About this</a></li>
         <li><a onclick="location.reload()">restart</a></li>
         <li><a  onclick="sleepMe()">sleep</a></li>
       </ul>
-    </div>
+    </div> -->
 
     <div class="tray">
       <img src="img/about-logo.svg" alt="BarCamp Omaha">
@@ -38,20 +38,20 @@
       <div class="icon">twitter</div>
       <div class="icon">facebook</div> -->
       <ul class="folders">
-        <li><a onclick="openWindow('tracks')"><img src="img/folder-icon.svg"> Tracks</a></li>
+        <li><a onclick="openWindow('tracks')"><img src="img/folder-icon.svg"> Speaker Tracks</a></li>
+        <li><a onclick="openWindow('notes')"><img src="img/folder-icon.svg"> Notes</a></li>
         <li><a onclick="openWindow('sponsors')"><img src="img/folder-icon.svg"> Sponsors</a></li>
-        <li><a onclick="openWindow('extras')"><img src="img/folder-icon.svg"> Extras</a></li>
         <li><a onclick="openWindow('collaborators')"><img src="img/folder-icon.svg"> Collaborators</a></li>
       </ul>
       <ul class="apps">
         <li><a href="mailto:barcampchair@nebraska.aiga.org" target="_blank">Contact</a></li>
         <!-- <li><a href="#">Notes</a></li> -->
-        <li><a href="http://schedule.barcampomaha.org/" target="_blank">'18 Talks</a></li>
-        <li><a href="#" target="_blank">Register</a></li>
+        <li><a href="http://schedule.barcampomaha.org/" target="_blank">2018 Talks</a></li>
         <li><a href="https://goo.gl/forms/asE3y9uZLRnByNuG2" target="_blank">Scholarships</a></li>
-        <li><a href="http://2017.barcampomaha.org" target="_blank">'17 Website</a></li>
-        <li><a href="http://2016.barcampomaha.org" target="_blank">'16 Website</a></li>
-        <li><a href="http://2015.barcampomaha.org" target="_blank">'15 Website</a></li>
+        <li><a href="#" target="_blank">Register</a></li><br>
+        <li><a href="http://2017.barcampomaha.org" target="_blank">2017</a></li>
+        <li><a href="http://2016.barcampomaha.org" target="_blank">2016</a></li>
+        <li><a href="http://2015.barcampomaha.org" target="_blank">2015</a></li>
         <!-- <li><a href="https://medium.com/@barcampomaha" target="_blank">Medium Blog</a></li> -->
       </ul>
     </div>
@@ -66,11 +66,8 @@
         <li>--------------------</li>
         <li><a onclick="switchNote('faqs')">FAQs</a></li>
         <li>--------------------</li>
-        <li><a href="https://goo.gl/forms/asE3y9uZLRnByNuG2" target="_blank">Scholarships</a></li>
+        <li><a onclick="switchNote('aboutthis')">About This</a></li>
         <li>--------------------</li>
-        <li><a href="https://medium.com/@barcampomaha" target="_blank">Medium Blog</a></li>
-        <li>--------------------</li>
-        <li><a onclick="switchNote('collaborators')">Collaborators</a></li>
       </ul>
       <img src="img/notes-divider.svg">
       <div class="note-default">
