@@ -1,8 +1,8 @@
 TODO features
 register eventbrite link
-collaborators link/note/window?
-sponsors window
-social media icons
+social media - put text links on right of tray
+collaborators note
+sponsors note
 FAQ note
 Agenda note
 mobile site
@@ -15,17 +15,25 @@ about this window - removing (in notes now)
 search - removing
 wifi dropdown - removing
 files for downloads/extras window - removing
+change track icons to have eyes on hover - not doing
+make dots close window - not doing
 
 
 TODO tweaks
+clicking on tracks expands window
+sleep add logo
+make tracks expand and collapse
+make the text in about more appealing
+change eyes to portraits
 bring window to top on click
-make dots close window
 make windows come out of icons and close back into them
-change track icons to have eyes on hover
-introduce more colors
 
 
 DONE
+remove window dots
+move sleep and restart to left and underline
+arrange windows on load
+introduce more colors
 make notes open by default, place in top left
 move sponsors and collaborators into notes
 change folder icons to tracks (file shape, color bg, jpeg text)

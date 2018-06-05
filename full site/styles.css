@@ -53,7 +53,7 @@ html {
   font-family: 'MAD Sans Fill', sans-serif;
   font-weight: bold;
   font-size: 16px;
-  color: #001718;
+  color: #080f29;
 
   height: 100vh;
   width: 100vw;
@@ -61,7 +61,7 @@ html {
 }
 a {
   font-weight: normal;
-  color: #001718;
+  color: #080f29;
   text-decoration: none;
   cursor: pointer;
 }
@@ -85,6 +85,7 @@ ul {
   position: absolute;
 }
 .dot {
+  display: none;
   float: left;
   font-size: 30px;
   padding-left: 6px;
@@ -147,6 +148,7 @@ ul {
   box-sizing: border-box;
   justify-content: space-between;
   padding: 20px 31px;
+  position: relative;
 }
 .notes .active a,
 .notes .active + li {
@@ -217,10 +219,11 @@ ul {
   width: 250px;
 }
 .track > div {
+  background: #00EAF4;
   margin-left: 37px;
 }
 .track img {
-  width: 167px;
+  width: 100%;
   border-radius: 0 0 5px 5px;
   display: block;
 }
@@ -231,10 +234,15 @@ ul {
   font-weight: bold;
   font-style: italic;
   font-size: 20px;
-  padding-top: 130px;
+  padding-top: 15px;
   padding-left: 37px;
+  padding-bottom: 15px;
+}
+.track h3 span {
+  font-style: normal;
 }
 .track p {
+  display: none;
   font-family: 'Inconsolata';
   font-weight: normal;
   line-height: 19.2px;
@@ -261,11 +269,11 @@ ul {
   animation-iteration-count: 1;
 }
 .tray h3 {
-  padding: 1em 0;
+  padding: 1.5em 0 0.25em 0;
 }
 .tray .register {
   display: block;
-  background: #ff243e;
+  background: #00EAF4;
   border-radius: 5px;
   padding: 9px 7px;
   font-size: 18px;
@@ -292,6 +300,7 @@ ul {
   position: absolute;
   left: 0;
   top: 0;
+  text-align: left;
 }
 .tray .right {
   font-family: 'Inconsolata', monospace;
@@ -300,8 +309,10 @@ ul {
   right: 0;
   top: 0;
 }
+.tray .left a,
 .tray .right a {
   display: block;
+  text-decoration: underline;
 }
 .tray .top > div {
   display: inline-block;
@@ -327,16 +338,16 @@ ul {
   padding-bottom: 5px;
 }
 .folders .technology svg .a {
-  fill: #F5DADF;
+  fill: #F4E4E9;
 }
 .folders .entrepreneur svg .a {
-  fill: #FFA3B5;
+  fill: #BFE114;
 }
 .folders .creative svg .a {
-  fill: #F9B5C4;
+  fill: #F44D46;
 }
 .folders .kitchensink svg .a {
-  fill: #F59BBB;
+  fill: #F2F319;
 }
 .tray .apps {
   padding-top: 35px;
