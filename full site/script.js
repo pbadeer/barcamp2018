@@ -41,6 +41,28 @@ function sleepMe () {
 function init(e) {
   startTime();
 
+  var tracks = document.querySelectorAll('.track');
+  for ( var i=0; i < tracks.length; i++ ) {
+    var track = tracks[i];
+
+    track.addEventListener("click", function(event){
+      document.querySelectorAll('.track').forEach(function(obj){
+        obj.style.zIndex = 1;
+      });
+      track.style.zIndex = 9999;
+    });
+  }
+
+
+  var trackTitles = document.querySelectorAll('.track h3');
+  for ( var i=0; i < trackTitles.length; i++ ) {
+    var track = trackTitles[i];
+    track.addEventListener("click", function(event){
+      findAncestor(event.target, ".track").classList.remove('closed');
+    });
+  }
+
+
   function findAncestor (el, sel) {
     while ((el = el.parentElement) && !((el.matches || el.matchesSelector).call(el,sel)));
     return el;

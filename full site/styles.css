@@ -217,6 +217,14 @@ ul {
 
 .track {
   width: 250px;
+  overflow: hidden;
+  position: absolute;
+}
+.track.closed {
+  max-height: 205px;
+}
+.track.closed p {
+  height: 0;
 }
 .track > div {
   background: #00EAF4;
@@ -228,7 +236,8 @@ ul {
   display: block;
 }
 .track h3,
-.tray h3 {
+.tray h3,
+.notes h3 {
   text-transform: uppercase;
   font-family: 'MAD Sans Fill';
   font-weight: bold;
@@ -238,11 +247,13 @@ ul {
   padding-left: 37px;
   padding-bottom: 15px;
 }
+.notes h3 {
+  padding: 1em 0 0 0;
+}
 .track h3 span {
   font-style: normal;
 }
 .track p {
-  display: none;
   font-family: 'Inconsolata';
   font-weight: normal;
   line-height: 19.2px;
@@ -251,6 +262,7 @@ ul {
   padding-bottom: 25px;
   padding-right: 28px;
   padding-left: 37px;
+  transition: all 1s ease-in-out;
 }
 
 
