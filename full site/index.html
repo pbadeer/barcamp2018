@@ -14,45 +14,91 @@
   <body>
     <div class="sleep" onclick="unsleepMe()"></div>
 
-<!--     <div class="about drag">
-      <img src="img/about-logo.svg" alt="BarCamp Omaha">
-      <ul>
-        <li><a onclick="openWindow('aboutthis')">About this</a></li>
-        <li><a onclick="location.reload()">restart</a></li>
-        <li><a  onclick="sleepMe()">sleep</a></li>
-      </ul>
-    </div> -->
-
     <div class="tray">
       <img src="img/about-logo.svg" alt="BarCamp Omaha">
+      <a href="#" class="register">Register Now</a>
       <div class="top">
-        <div class="clock">6/1/18 00:00PM</div>
-        <div class="search"><img src="img/search-icon.svg"></div>
-        <div class="wifi">
-          <img src="img/wifi-icon.svg">
-          <!-- <span>ssid</span>
-          <span>pwd</span> -->
+        <span class="left clock"></span>
+        <div class="right">
+          <a onclick="location.reload()">restart</a>
+          <a onclick="sleepMe()">sleep</a>
         </div>
       </div>
   <!--         <div class="icon">instagram</div>
       <div class="icon">twitter</div>
       <div class="icon">facebook</div> -->
+      <h3>Speaker Tracks</h3>
+
       <ul class="folders">
-        <li><a onclick="openWindow('tracks')"><img src="img/folder-icon.svg"> Speaker Tracks</a></li>
-        <li><a onclick="openWindow('notes')"><img src="img/folder-icon.svg"> Notes</a></li>
-        <li><a onclick="openWindow('sponsors')"><img src="img/folder-icon.svg"> Sponsors</a></li>
-        <li><a onclick="openWindow('collaborators')"><img src="img/folder-icon.svg"> Collaborators</a></li>
+        <li class="technology">
+          <a onclick="openTrack('tracks')">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.13 74.15">
+                <g>
+                  <path class="a" d="M.25.25H83.42A22.45,22.45,0,0,1,105.88,22.7V73.9a0,0,0,0,1,0,0H.25a0,0,0,0,1,0,0V.25A0,0,0,0,1,.25.25Z"/>
+                  <text class="b" transform="translate(52.76 64.5)">JPEG</text>
+                  <rect class="c" x="0.17" y="69.83" width="105.71" height="4.05"/>
+                </g>
+              </svg>
+            </div>
+            Technology
+          </a>
+        </li>
+        <li class="entrepreneur">
+          <a onclick="openTrack('notes')">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.13 74.15">
+                <g>
+                  <path class="a" d="M.25.25H83.42A22.45,22.45,0,0,1,105.88,22.7V73.9a0,0,0,0,1,0,0H.25a0,0,0,0,1,0,0V.25A0,0,0,0,1,.25.25Z"/>
+                  <text class="b" transform="translate(52.76 64.5)">JPEG</text>
+                  <rect class="c" x="0.17" y="69.83" width="105.71" height="4.05"/>
+                </g>
+              </svg>
+            </div>
+            Entrepreneur
+          </a>
+        </li>
+        <li class="creative">
+          <a onclick="openTrack('sponsors')">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.13 74.15">
+                <g>
+                  <path class="a" d="M.25.25H83.42A22.45,22.45,0,0,1,105.88,22.7V73.9a0,0,0,0,1,0,0H.25a0,0,0,0,1,0,0V.25A0,0,0,0,1,.25.25Z"/>
+                  <text class="b" transform="translate(52.76 64.5)">JPEG</text>
+                  <rect class="c" x="0.17" y="69.83" width="105.71" height="4.05"/>
+                </g>
+              </svg>
+            </div>
+            Creative
+          </a>
+        </li>
+        <li class="kitchensink">
+          <a onclick="openTrack('collaborators')">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.13 74.15">
+                <g>
+                  <path class="a" d="M.25.25H83.42A22.45,22.45,0,0,1,105.88,22.7V73.9a0,0,0,0,1,0,0H.25a0,0,0,0,1,0,0V.25A0,0,0,0,1,.25.25Z"/>
+                  <text class="b" transform="translate(52.76 64.5)">JPEG</text>
+                  <rect class="c" x="0.17" y="69.83" width="105.71" height="4.05"/>
+                </g>
+              </svg>
+            </div>
+            Kitchen Sink
+          </a>
+        </li>
       </ul>
+      
       <ul class="apps">
         <li><a href="mailto:barcampchair@nebraska.aiga.org" target="_blank">Contact</a></li>
-        <!-- <li><a href="#">Notes</a></li> -->
         <li><a href="http://schedule.barcampomaha.org/" target="_blank">2018 Talks</a></li>
         <li><a href="https://goo.gl/forms/asE3y9uZLRnByNuG2" target="_blank">Scholarships</a></li>
-        <li><a href="#" target="_blank">Register</a></li><br>
+        <!-- <li><a href="https://medium.com/@barcampomaha" target="_blank">Medium Blog</a></li> -->
+      </ul>
+
+      <ul class="links">
         <li><a href="http://2017.barcampomaha.org" target="_blank">2017</a></li>
         <li><a href="http://2016.barcampomaha.org" target="_blank">2016</a></li>
         <li><a href="http://2015.barcampomaha.org" target="_blank">2015</a></li>
-        <!-- <li><a href="https://medium.com/@barcampomaha" target="_blank">Medium Blog</a></li> -->
       </ul>
     </div>
 
@@ -62,11 +108,15 @@
         <span>note</span>
       </span>
       <ul>
+        <li class="active"><a onclick="switchNote('aboutthis')">About This</a></li>
+        <li>--------------------</li>
         <li><a onclick="switchNote('agenda')">Agenda</a></li>
         <li>--------------------</li>
         <li><a onclick="switchNote('faqs')">FAQs</a></li>
         <li>--------------------</li>
-        <li><a onclick="switchNote('aboutthis')">About This</a></li>
+        <li><a onclick="switchNote('sponsors')">Sponsors</a></li>
+        <li>--------------------</li>
+        <li><a onclick="switchNote('collaborators')">Collaborators</a></li>
         <li>--------------------</li>
       </ul>
       <img src="img/notes-divider.svg">
@@ -76,20 +126,7 @@
       </div>
     </div>
 
-    <div class="tracks drag hidden">
-      <span class="handle">
-        <span class="dot">&bull;</span>
-        <span>Tracks Folder</span>
-      </span>
-      <ul>
-        <li><a onclick="openWindow('technology')"><img src="img/jpeg-icon.svg"> Technology</a></li>
-        <li><a onclick="openWindow('entrepreneur')"><img src="img/jpeg-icon.svg"> Entrepreneur</a></li>
-        <li><a onclick="openWindow('creative')"><img src="img/jpeg-icon.svg"> Creative</a></li>
-        <li><a onclick="openWindow('kitchensink')"><img src="img/jpeg-icon.svg"> Kitchen Sink</a></li>
-      </ul>
-    </div>
-
-    <div class="track drag hidden technology">
+    <div class="track drag technology" style="left:561px;top:34px;">
       <span class="handle">
         <span class="dot">&bull;</span>
       </span>
@@ -103,7 +140,7 @@
       <p>Are you agile, traditional, waterfall or adaptive? Are you researching, designing, programming or testing? Or you about to blow our minds with something so new, we have to see it to believe it?</p>
     </div>
 
-    <div class="track drag hidden entrepreneur">
+    <div class="track drag entrepreneur" style="left:678px;top:70px;">
       <span class="handle">
         <span class="dot">&bull;</span>
       </span>
@@ -117,7 +154,7 @@
       <p>You're not working for the man, you ARE the man (or #bossbabe, obvi). Tell us about your journey to owning your own work (even if it's a side hustle) and living the dream.</p>
     </div>
 
-    <div class="track drag hidden creative">
+    <div class="track drag creative" style="left:795px;top:112px;">
       <span class="handle">
         <span class="dot">&bull;</span>
       </span>
@@ -131,7 +168,7 @@
       <p>When you're in your zone, when your art seems to create itself, when you amaze yourself with what you've done - what gets you there? Tell us what you do when you're at your most creative.</p>
     </div>
 
-    <div class="track drag hidden kitchensink">
+    <div class="track drag kitchensink" style="left:909px;top:159px;">
       <span class="handle">
         <span class="dot">&bull;</span>
       </span>
@@ -143,11 +180,6 @@
       </div>
       <h3>Kitchen Sink</h3>
       <p>Maybe you're a plumber. Maybe you're a chef. Maybe you're Matt Damon and super into water. We want to hear your kitchen sink story (literal or not) and the how behind your gushing achievements.</p>
-    </div>
-
-    <div class="aboutthis hidden drag">
-      <p>At BarCamp, we've ditched the predetermined speaker list. We're a user-generated, creative unconference that provides a space for everyday humans to share their passions. Talks aren’t scheduled until just before the conference starts, and anyone can speak — though it's just as rewarding to sit back and listen. There's no bar (except for drinks at the opening party) and no camp (unless you bring your own tent). But there's a whole lot to discover.</p>
-      <p>This year, we celebrate process. How do we get from A to B, and where do our creative worlds collide? BarCamp 2018 invites you to share your messy, extraordinary, perhaps unfinished creations — because we're all a work in process.</p>
     </div>
 
     <div class="sponsors hidden drag">
@@ -162,55 +194,6 @@
         <li>bronze</li>
       </ul>
     </div>
-
-    <div class="extras hidden drag">
-      <span class="handle">
-        <span class="dot">&bull;</span>
-        <span>Extras Folder</span>
-      </span>
-      <ul>
-        <li><a href="#"><img src="img/mov-icon.svg"> BC'18xProcess</a></li>
-        <li><a href="#"><img src="img/jpeg-icon.svg"> DSKTP BG 1</a></li>
-        <li><a href="#"><img src="img/jpeg-icon.svg"> DSKTP BG 2</a></li>
-        <li><a href="#"><img src="img/jpeg-icon.svg"> DSKTP BG 3</a></li>
-      </ul>
-    </div>
-<!--       desktop bg / bottom tray
-        logo
-        top
-          clock
-          search
-          wifi dropdown
-            ssid and pwd
-        desktop only?
-          instagram - icon
-          twitter - icon
-          facebook - icon
-        notes - app
-          about - note
-          agenda - note
-          faq - note
-        tracks - folder
-          creative
-          technology
-          entrepreneur
-          kitchen sink
-        sponsors - folder
-          platinum
-          gold
-          silver
-          bronze
-        extras - folder
-          wallpapers
-          process sketches and videos
-        bottom (buttons)
-          folder icons
-          register - app
-          2018 talks - app
-          blog - app
-          scholarship - app
-          contact - app
-          notes - app -->
   
   </body>
 </html>

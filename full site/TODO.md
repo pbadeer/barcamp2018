@@ -1,30 +1,32 @@
-TODO
-
-about this window
+TODO features
 register eventbrite link
 collaborators link/note/window?
 sponsors window
 social media icons
-wifi dropdown
-files for downloads/extras window
-
-
 FAQ note
 Agenda note
-search??
+mobile site
+LATER
 redeploy old sites
 animations for tracks
-mobile site
+
+NOT DOING
+about this window - removing (in notes now)
+search - removing
+wifi dropdown - removing
+files for downloads/extras window - removing
 
 
-
-
-
+TODO tweaks
+bring window to top on click
 make dots close window
 make windows come out of icons and close back into them
-make notes open by default, place in top right
 change track icons to have eyes on hover
 introduce more colors
+
+
+DONE
+make notes open by default, place in top left
 move sponsors and collaborators into notes
 change folder icons to tracks (file shape, color bg, jpeg text)
 open tracks by default

@@ -134,7 +134,7 @@ ul {
   top: -150%;
   left: 0;
   z-index: 9999;
-  transition: top 3s ease-in-out;
+  transition: top 2s ease-in-out;
 }
 
 
@@ -143,10 +143,14 @@ ul {
   font-weight: normal;
   display: flex;
   max-height: 350px;
-  max-width: 539px;
+  max-width: 600px;
   box-sizing: border-box;
   justify-content: space-between;
-  padding: 71px 31px;
+  padding: 20px 31px;
+}
+.notes .active a,
+.notes .active + li {
+  font-weight: bold;
 }
 .notes img {
   width: 7px;
@@ -158,8 +162,11 @@ ul {
   font-size: 16px;
 }
 .notes > div {
-  flex-basis: 250px;
+  flex-basis: 320px;
   overflow-y: scroll;
+}
+.notes > ul {
+  padding-top: 71px;
 }
 .notes li {
   font-size: 18px;
@@ -217,7 +224,8 @@ ul {
   border-radius: 0 0 5px 5px;
   display: block;
 }
-.track h3 {
+.track h3,
+.tray h3 {
   text-transform: uppercase;
   font-family: 'MAD Sans Fill';
   font-weight: bold;
@@ -241,31 +249,59 @@ ul {
 .tray {
   position: fixed;
   bottom: 0;
-  width: 973px;
   background: url('img/tray-bg.svg') no-repeat center top;
+  background-size: cover;
   padding-top: 70px;
+  padding-left: 50px;
+  width: 800px;
   text-align: center;
   left: 50%;
   transform: translate(-50%, 0);
-  animation: movein 3s ease-in-out;
+  animation: movein 1.5s ease-in-out;
   animation-iteration-count: 1;
+}
+.tray h3 {
+  padding: 1em 0;
+}
+.tray .register {
+  display: block;
+  background: #ff243e;
+  border-radius: 5px;
+  padding: 9px 7px;
+  font-size: 18px;
+  width: 130px;
+  margin: 1em auto 0 auto;
 }
 .tray > img {
   width: 290px;
-  margin-left: 47px;
+  margin-left: 15px;
 }
 .tray .top {
-  display: block;
   text-align: right;
-  margin: 0 9%;
   line-height: 24px;
   height: 24px;
-  padding-bottom: 98px;
+  position: absolute;
+  top: 90px;
+  left: 9%;
+  right: 9%;
+  width: 82%;
 }
-.tray .clock {
+.tray .left {
   font-family: 'Inconsolata', monospace;
   font-size: 16px;
-  float: left;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.tray .right {
+  font-family: 'Inconsolata', monospace;
+  font-size: 16px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.tray .right a {
+  display: block;
 }
 .tray .top > div {
   display: inline-block;
@@ -286,13 +322,33 @@ ul {
   margin: 0 21px;
   font-size: 16px;
 }
-.tray .folders img {
-  width: 90px;
+.tray .folders svg {
+  /*width: 90px;*/
   padding-bottom: 5px;
+}
+.folders .technology svg .a {
+  fill: #F5DADF;
+}
+.folders .entrepreneur svg .a {
+  fill: #FFA3B5;
+}
+.folders .creative svg .a {
+  fill: #F9B5C4;
+}
+.folders .kitchensink svg .a {
+  fill: #F59BBB;
 }
 .tray .apps {
   padding-top: 35px;
-  padding-bottom: 66px;
+}
+.tray .links {
+  padding: 1em 0;
+}
+.tray .links li {
+  display: inline-block;
+}
+.tray .links a {
+  text-decoration: underline;
 }
 .tray .apps li {
   background: #00EAF4;
@@ -300,6 +356,25 @@ ul {
   display: inline-block;
   padding: 9px 7px;
   font-size: 18px;
+}
+
+
+
+
+.icon .a {
+  fill: none;
+  stroke: #000;
+  stroke-miterlimit: 10;
+  stroke-width: 0.5px;
+}
+.icon .b {
+  font-size: 21px;
+  font-family: 'MAD Sans Fill';
+  font-weight: 700;
+  font-style: italic;
+}
+.icon .c {
+  fill: #10253e;
 }
 
 
