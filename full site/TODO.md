@@ -1,15 +1,3 @@
-TODO features
-register eventbrite link
-social media - put text links on right of tray
-collaborators note
-sponsors note
-FAQ note
-Agenda note
-mobile site
-LATER
-redeploy old sites
-animations for tracks
-
 NOT DOING
 about this window - removing (in notes now)
 search - removing
@@ -20,13 +8,24 @@ make dots close window - not doing
 make windows come out of icons and close back into them - not doing
 
 
-TODO tweaks
+TODO
 clicking on tracks in tray expands window
-change eyes to portraits
+change eyes to portraits on expansion
 bring window to top on click
+register button link
+partners note
+FAQ note
+Agenda note
+mobile site
+background shapes
+maybe: resize note box
 
+LATER
+redeploy old sites
+animations for tracks
 
 DONE
+social media - put text links on right of tray
 make tracks expand and collapse
 make the text in about more appealing
 sleep add logo
