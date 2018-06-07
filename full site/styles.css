@@ -14,34 +14,6 @@
     font-weight: normal;
     font-style: normal;
 }
-@font-face {
-    font-family: 'MAD Sans Fill';
-    src: url('fonts/MADSansFill-Regular.woff2') format('woff2'),
-        url('fonts/MADSansFill-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'MAD Sans Fill';
-    src: url('fonts/MADSansFill-BoldItalic.woff2') format('woff2'),
-        url('fonts/MADSansFill-BoldItalic.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-}
-@font-face {
-    font-family: 'MAD Sans Fill';
-    src: url('fonts/MADSansFill-BoldItalic.woff2') format('woff2'),
-        url('fonts/MADSansFill-BoldItalic.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-}
-@font-face {
-    font-family: 'MAD Sans Fill';
-    src: url('fonts/MADSansFill-Regular.woff2') format('woff2'),
-        url('fonts/MADSansFill-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
 
 @keyframes movein {
   from {bottom: -100%;}
@@ -65,6 +37,14 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
+.tray .top a:hover,
+.tray .top a:active,
+.tray .links a:hover,
+.tray .links a:active,
+.notes p a:hover,
+.notes p a:active {
+  color: #FF243E;
+}
 sup {
   font-size: 50%;
 }
@@ -80,7 +60,8 @@ ul {
 .drag, .nodrag {
   display: inline-block;
   border-radius: 5px;
-  background: rgba(0,213,222,0.95);
+  /*background: rgba(0,213,222,0.95);*/
+  background: #00EAF4;
   padding-top: 19px;
   position: absolute;
 }
@@ -136,6 +117,20 @@ ul {
   left: 0;
   z-index: 9999;
   transition: top 2s ease-in-out;
+  text-align: center;
+}
+.sleep img {
+  margin-right: -5%;
+}
+.sleep div {
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 50%;
+  margin: 0 auto;
+  color: #fff;
+  font-family: 'Inconsolata';
+  line-height: 50px;
 }
 
 
@@ -143,14 +138,15 @@ ul {
   line-height: 1.25rem;
   font-weight: normal;
   display: flex;
-  max-height: 350px;
+  max-height: 230px;
   max-width: 600px;
   box-sizing: border-box;
   justify-content: space-between;
   padding: 20px 31px;
   position: relative;
+  align-items: start;
 }
-.notes .active a,
+.notes .active,
 .notes .active + li {
   font-weight: bold;
 }
@@ -158,60 +154,30 @@ ul {
   width: 7px;
 }
 .notes p {
-  margin-top: 1em;
   font-family: 'Inconsolata', monospace;
   font-weight: normal;
   font-size: 16px;
+  margin-bottom: 2em;
+}
+.notes p a {
+  text-decoration: underline;
+  font-weight: bold;
 }
 .notes > div {
   flex-basis: 320px;
   overflow-y: scroll;
+  height: 175px;
 }
-.notes > ul {
-  padding-top: 71px;
+.notes > *:not(.handle) {
+  padding-top: 20px;
 }
 .notes li {
   font-size: 18px;
+  cursor: pointer;
 }
-
-
-.about {
-  display: inline-block;
-  background: url('img/about-bg2.svg') no-repeat;
-  background-size: cover;
-  padding: 31px 18px 16px 24px;
-}
-.about > img {
-  width: 201px;
-  padding-bottom: 75px;
-}
-
-.extras,
-.tracks {
-  width: 329px;
-  box-sizing: border-box;
-  padding: 38px 47px 30px 50px;
-}
-.extras ul,
-.tracks ul {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-}
-.tracks li:nth-child(n+3),
-.extras li:nth-child(n+3) {
-  padding-top: 25px;
-}
-.extras li,
-.tracks li {
-  display: inline-block;
-  width: 105px;
-  text-align: center;
-}
-.extras li img,
-.tracks li img {
-  width: 105px;
-  margin-bottom: 8px;
+.notes li span {
+  float: right;
+  padding-right: 5px;
 }
 
 
@@ -248,7 +214,10 @@ ul {
   padding-bottom: 15px;
 }
 .notes h3 {
-  padding: 1em 0 0 0;
+  padding: 0 0 1em 0;
+}
+.track h3 {
+  cursor: pointer;
 }
 .track h3 span {
   font-style: normal;
@@ -267,6 +236,7 @@ ul {
 
 
 .tray {
+  z-index: -1;
   position: fixed;
   bottom: 0;
   background: url('img/tray-bg.svg') no-repeat center top;
@@ -372,13 +342,21 @@ ul {
 }
 .tray .links a {
   text-decoration: underline;
+  font-weight: bold;
 }
 .tray .apps li {
+  display: inline-block;
+}
+.tray .apps li a {
   background: #00EAF4;
   border-radius: 5px;
-  display: inline-block;
   padding: 9px 7px;
   font-size: 18px;
+}
+.tray .register:hover,
+.tray .apps li a:hover {
+  background: #FF243E;
+  color: #080f29;
 }
 
 

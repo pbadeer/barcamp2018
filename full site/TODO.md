@@ -17,19 +17,19 @@ wifi dropdown - removing
 files for downloads/extras window - removing
 change track icons to have eyes on hover - not doing
 make dots close window - not doing
+make windows come out of icons and close back into them - not doing
 
 
 TODO tweaks
-clicking on tracks expands window
-sleep add logo
-make tracks expand and collapse
-make the text in about more appealing
+clicking on tracks in tray expands window
 change eyes to portraits
 bring window to top on click
-make windows come out of icons and close back into them
 
 
 DONE
+make tracks expand and collapse
+make the text in about more appealing
+sleep add logo
 remove window dots
 move sleep and restart to left and underline
 arrange windows on load
