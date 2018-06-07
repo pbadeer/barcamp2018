@@ -22,13 +22,6 @@ function checkTime(i) {
   return i;
 }
 
-function openWindow (a) {
-  var b = document.querySelector('.' + a);
-  b.style.top = '25vh';
-  b.style.opacity = 1;
-  b.style.transform = '';
-}
-
 function unsleepMe(){
   var b = document.querySelector('.sleep');
   b.style.top = '-150%';
@@ -69,7 +62,6 @@ function init(e) {
     });
   }
 
-
   function findAncestor (el, sel) {
     while ((el = el.parentElement) && !((el.matches || el.matchesSelector).call(el,sel)));
     return el;
@@ -86,9 +78,8 @@ function init(e) {
         // save a backup of styles
         draggableElems[i].dataset.style = draggableElems[i].getAttribute('style');
       }
-        // erase styles
-        draggableElems[i].setAttribute('style', '');
-      
+      // erase styles
+      draggableElems[i].setAttribute('style', '');
     }
   }
 

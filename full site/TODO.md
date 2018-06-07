@@ -11,8 +11,8 @@ make windows come out of icons and close back into them - not doing
 TODO
 clicking on tracks in tray expands window
 change eyes to portraits on expansion
+mobile note nav
 register button link
-FAQ note
 maybe: resize note box
 
 LATER
@@ -20,6 +20,7 @@ redeploy old sites
 animations for tracks
 
 DONE
+FAQ note
 Agenda note
 partners note
 note switching / note nav
