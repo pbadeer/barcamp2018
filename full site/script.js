@@ -31,6 +31,15 @@ function sleepMe () {
   b.style.top = '0';
 }
 
+function openNoteMobile(note) {
+  var ans = document.querySelector('.note.' + note);
+  if (ans.classList.contains('hidden')) {
+    ans.classList.remove('hidden');
+  } else {
+    ans.classList.add('hidden');
+  }
+}
+
 function switchNote(note, elem) {
   var notes = document.querySelectorAll('.note');
   for(i = 0; i < notes.length; i++) {

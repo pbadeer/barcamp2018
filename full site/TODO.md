@@ -11,13 +11,14 @@ change eyes to portraits on expansion
 
 
 TODO
-mobile note nav
+nothing!
 
 LATER
 redeploy old sites
 animations for tracks
 
 DONE
+mobile note nav
 tracks on mobile, stacked
 tray shortcuts for tracks click to open
 be able to close tracks on desktop

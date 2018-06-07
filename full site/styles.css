@@ -498,7 +498,8 @@ ul {
     overflow: auto;
     height: auto;
   }
-  .notes .note:not(.about) > *:not(.mobile-only),
+  /*.notes .note:not(.about) > *:not(.mobile-only),*/
+  .note.hidden > *:not(h2),
   .tray h3,
   .tray .logo,
   .tray .folders,
@@ -506,6 +507,14 @@ ul {
   .notes > ul,
   .notes > img {
     display: none;
+  }
+  .note.hidden h2::after {
+    content: '\25BF';
+    padding-left: 0.5em;
+  }
+  .note:not(.hidden) h2::after {
+    content: '\25BE';
+    padding-left: 0.5em;
   }
   .tray {
     z-index: 1;
