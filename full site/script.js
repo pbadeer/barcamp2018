@@ -38,21 +38,28 @@ function sleepMe () {
   b.style.top = '0';
 }
 
+function switchNote(note, elem) {
+  var notes = document.querySelectorAll('.note');
+  for(i = 0; i < notes.length; i++) {
+    notes[i].classList.add('hidden');
+  }
+  document.querySelector('.note.' + note).classList.remove('hidden');
+  document.querySelector('.notes li.active').classList.remove('active');
+  elem.classList.add('active');
+}
+
 function init(e) {
   startTime();
 
-  var tracks = document.querySelectorAll('.track');
-  for ( var i=0; i < tracks.length; i++ ) {
-    var track = tracks[i];
-
-    track.addEventListener("click", function(event){
-      document.querySelectorAll('.track').forEach(function(obj){
-        obj.style.zIndex = 1;
-      });
-      track.style.zIndex = 9999;
-    });
+  var all = document.querySelectorAll(".track");
+  var prev = false;
+  for(i = 0; i < all.length; i++) {
+    all[i].addEventListener("click", function(){
+      if (prev) { prev.style.zIndex = 1; }
+      this.style.zIndex = 1000;
+      prev = this;
+    })
   }
-
 
   var trackTitles = document.querySelectorAll('.track h3');
   for ( var i=0; i < trackTitles.length; i++ ) {
@@ -87,6 +94,7 @@ function init(e) {
 
   // NOT MOBILE
   else {
+    var prev = false;
     // Make windows draggable if not mobile
     for ( var i=0; i < draggableElems.length; i++ ) {
       var backup = draggableElems[i].dataset.style;
@@ -98,8 +106,13 @@ function init(e) {
       var draggie = new Draggabilly( draggableElem, {
         handle: '.handle'
       });
-      draggie.on('dragStart', function(event, pointer) {
-        findAncestor(event.target, ".drag").classList.remove('hidden');
+      draggie.on('dragStart', function(event) {
+        var ans = findAncestor(event.target, ".drag");
+        if (ans) { ans.classList.remove('hidden') }
+
+        if (prev) { prev.style.zIndex = 1; }
+        ans.style.zIndex = 1000;
+        prev = ans;
       });
       draggies.push( draggie );
     }

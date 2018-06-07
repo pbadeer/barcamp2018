@@ -19,30 +19,34 @@
       </div>
     </div>
 
+    <img src="img/about-logo.svg" alt="BarCamp Omaha" class="mobile-only logo">
+
     <div class="notes drag" style="top:15vh;left:50%;transform:translate(-50%, 0);">
       <span class="handle">
         <span class="dot">&bull;</span>
         <span>note</span>
       </span>
       <ul>
-        <li class="active" onclick="switchNote('about')">About <span>&#x25B8;</span></li>
+        <li class="active" onclick="switchNote('about', this)">About</li>
         <li>--------------------</li>
-        <li onclick="switchNote('agenda')">Agenda <span>&#x25B9;</span></li>
+        <li onclick="switchNote('agenda', this)">Agenda</li>
         <li>--------------------</li>
-        <li onclick="switchNote('faqs')">FAQs <span>&#x25B9;</span></li>
+        <li onclick="switchNote('faqs', this)">FAQs</li>
         <li>--------------------</li>
-        <li onclick="switchNote('partners')">Partners <span>&#x25B9;</span></li>
+        <li onclick="switchNote('partners', this)">Partners</li>
         <li>--------------------</li>
       </ul>
       <img src="img/notes-divider.svg">
       <div class="all">
         <div class="note about">
+          <h2 class="mobile-only">About <span>&#x25BF;</span></h2>
           <h3>Sat, Aug 4, 2018<br>KANEKO | 8 AM - 4 PM</h3>
           <h3>A WORK IN PROCESS</h3>
           <p>At BarCamp, we've ditched the predetermined speaker list. We're a user-generated, creative unconference that provides a space for everyday humans to share their passions. Talks aren’t scheduled until just before the conference starts, and anyone can speak — though it's just as rewarding to sit back and listen. There's no bar (except for drinks at the opening party) and no camp (unless you bring your own tent). But there's a whole lot to discover.</p>
           <p>This year, we celebrate process. How do we get from A to B, and where do our creative worlds collide? BarCamp 2018 invites you to share your messy, extraordinary, perhaps unfinished creations — because we're all a work in process.</p>
         </div>
-        <div class="note agenda">
+        <div class="note agenda hidden">
+          <h2 class="mobile-only">Agenda <span>&#x25BE;</span></h2>
           <h3>Thursday, Aug 2</h3>
           <h4><span>7pm</span> | *NEW* BarCamp Coworking<br>&gt; No More Empty Cups</h4>
           <p>Whether you have a last-minute talk idea, need advice on your slides or want to practice before the big day, join us for a casual coworking night where you can refine your BarCamp talk, featuring input from community mentors in public speaking and creative presentations.</p>
@@ -67,7 +71,8 @@
           <h4><span>4pm</span> | Closing Ceremony</h4>
           <p>Say goodbye to another year of BarCamp. But stay tuned — we’re planning extended programming in 2019.</p>
         </div>
-        <div class="note faqs">
+        <div class="note faqs hidden">
+          <h2 class="mobile-only">FAQs <span>&#x25BE;</span></h2>
           <ul>
             <li>What does my BarCamp ticket include?</li>
             <ul>
@@ -141,7 +146,8 @@
             </ul>
           </ul>
         </div>
-        <div class="note partners">
+        <div class="note partners hidden">
+          <h2 class="mobile-only">Partners <span>&#x25BE;</span></h2>
           <h3>PARTNERS</h3>
           <p>
             Event Venue: <a href="https://thekaneko.org/">KANEKO</a><br>
@@ -210,21 +216,8 @@
       <p>Maybe you're a plumber. Maybe you're a chef. Maybe you're Matt Damon and super into water. We want to hear your kitchen sink story (literal or not) and the how behind your gushing achievements.</p>
     </div>
 
-    <div class="sponsors hidden drag">
-      <span class="handle">
-        <span class="dot">&bull;</span>
-        <span>sponsors</span>
-      </span>
-      <ul>
-        <li>platinum</li>
-        <li>gold</li>
-        <li>silver</li>
-        <li>bronze</li>
-      </ul>
-    </div>
-
     <div class="tray">
-      <img src="img/about-logo.svg" alt="BarCamp Omaha">
+      <img src="img/about-logo.svg" alt="BarCamp Omaha" class="logo">
 
       <a href="#" class="register">Register Now</a>
       
@@ -304,15 +297,15 @@
       
       <ul class="apps">
         <li><a href="mailto:barcampchair@nebraska.aiga.org" target="_blank">Contact</a></li>
-        <li><a href="http://schedule.barcampomaha.org/" target="_blank">2018 Talk Signup</a></li>
+        <!-- <li><a href="http://schedule.barcampomaha.org/" target="_blank">2018 Talk Signup</a></li> -->
         <li><a href="https://goo.gl/forms/asE3y9uZLRnByNuG2" target="_blank">Scholarships</a></li>
         <!-- <li><a href="https://medium.com/@barcampomaha" target="_blank">Medium Blog</a></li> -->
       </ul>
 
       <ul class="links">
-        <li><a href="http://2017.barcampomaha.org" target="_blank">2017</a></li>
-        <li><a href="http://2016.barcampomaha.org" target="_blank">2016</a></li>
-        <li><a href="http://2015.barcampomaha.org" target="_blank">2015</a></li>
+        <li><a href="http://2017.barcampomaha.org" target="_blank">2017 Website</a></li>
+        <!-- <li><a href="http://2016.barcampomaha.org" target="_blank">2016</a></li> -->
+        <!-- <li><a href="http://2015.barcampomaha.org" target="_blank">2015</a></li> -->
       </ul>
     </div>
 
