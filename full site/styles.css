@@ -98,9 +98,6 @@ ul {
   height: 15px;
   vertical-align: middle;
 }
-.mobile-only {
-  display: none;
-}
 
 
 .hidden {
@@ -269,6 +266,24 @@ ul {
   padding-left: 37px;
   transition: all 1s ease-in-out;
 }
+.track.technology {
+  left:calc(47% - 300px);
+  top:39px;
+  transform:translate(-100%, 0);
+}
+.track.entrepreneur {
+  left:calc(47% - 300px);
+  top:290px;
+  transform:translate(-100%, 0);
+}
+.track.creative {
+  left:calc(53% + 300px);
+  top:39px;
+}
+.track.kitchensink {
+  left:calc(53% + 300px);
+  top:290px;
+}
 
 
 .tray {
@@ -289,7 +304,8 @@ ul {
 .tray h3 {
   padding: 1.5em 0 0.25em 0;
 }
-.tray .register {
+.register {
+  text-align: center;
   display: block;
   background: #00EAF4;
   border-radius: 5px;
@@ -403,10 +419,36 @@ ul {
 }
 
 
+/* keep below all desktop code */
+.mobile-only {
+  display: none;
+}
 
 @media all and (max-width: 1200px) {
   .track {
     display: none;
+  }
+  .track.technology {
+    left: 3%;
+    top:39px;
+    transform: none;
+  }
+  .track.entrepreneur {
+    left: 3%;
+    top:290px;
+    transform: none;
+  }
+  .track.creative {
+    left: auto;
+    right: 3%;
+    top:39px;
+    transform: none;
+  }
+  .track.kitchensink {
+    left: auto;
+    right: 3%;
+    top:290px;
+    transform: none;
   }
   .notes {
     top: 3vh;
@@ -420,7 +462,23 @@ ul {
     display: inherit;
   }
   .mobile-only {
-    display: inherit;
+    display: block;
+  }
+  body > h2.mobile-only {
+    text-align: center;
+    margin: 2em auto 0.5em auto;
+  }
+  .track.technology,
+  .track.entrepreneur,
+  .track.creative,
+  .track.kitchensink {
+    position: relative;
+    display: block;
+    transform: none;
+    top: auto;
+    left: auto;
+    right: auto;
+    margin: 0.5em auto;
   }
   .mobile-only.logo {
     width: 75%;
@@ -450,6 +508,7 @@ ul {
     display: none;
   }
   .tray {
+    z-index: 1;
     padding-left: 0;
     transform: none;
     position: static;

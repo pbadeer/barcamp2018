@@ -6,20 +6,25 @@ files for downloads/extras window - removing
 change track icons to have eyes on hover - not doing
 make dots close window - not doing
 make windows come out of icons and close back into them - not doing
+maybe: resize note box
+change eyes to portraits on expansion
 
 
 TODO
-clicking on tracks in tray expands window
-change eyes to portraits on expansion
 mobile note nav
-register button link
-maybe: resize note box
 
 LATER
 redeploy old sites
 animations for tracks
 
 DONE
+tracks on mobile, stacked
+tray shortcuts for tracks click to open
+be able to close tracks on desktop
+faq links open in new tab
+scroll to top on note switch
+register button link
+move register now below logo on mobile
 FAQ note
 Agenda note
 partners note

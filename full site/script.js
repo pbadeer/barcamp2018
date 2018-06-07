@@ -39,6 +39,14 @@ function switchNote(note, elem) {
   document.querySelector('.note.' + note).classList.remove('hidden');
   document.querySelector('.notes li.active').classList.remove('active');
   elem.classList.add('active');
+  document.querySelector('.notes .all').scrollTop = 0;
+}
+
+function openTrack(track) {
+  var track = document.querySelector('.track.'+track);
+  track.style.display = "block";
+  track.classList.remove('closed');
+  track.style.zIndex = track.style.zIndex + 1;
 }
 
 function init(e) {
@@ -58,7 +66,12 @@ function init(e) {
   for ( var i=0; i < trackTitles.length; i++ ) {
     var track = trackTitles[i];
     track.addEventListener("click", function(event){
-      findAncestor(event.target, ".track").classList.remove('closed');
+      var ans = findAncestor(event.target, ".track");
+      if (ans.classList.contains('closed')) {
+        ans.classList.remove('closed');
+      } else {
+        ans.classList.add('closed');
+      }
     });
   }
 
@@ -99,6 +112,7 @@ function init(e) {
       });
       draggie.on('dragStart', function(event) {
         var ans = findAncestor(event.target, ".drag");
+        ans.style.right = "auto";
         if (ans) { ans.classList.remove('hidden') }
 
         if (prev) { prev.style.zIndex = 1; }
