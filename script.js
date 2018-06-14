@@ -93,27 +93,27 @@ function init(e) {
   var draggies = [];
 
   // MOBILE
-  if (window && window.outerWidth <= 768) {
-    // Remove inline styles on mobile
-    for ( var i=0; i < draggableElems.length; i++ ) {
-      if (draggableElems[i].style && !draggableElems[i].dataset.style) {
-        // save a backup of styles
-        draggableElems[i].dataset.style = draggableElems[i].getAttribute('style');
-      }
-      // erase styles
-      draggableElems[i].setAttribute('style', '');
-    }
-  }
+  // if (window && window.outerWidth <= 768) {
+  //   // Remove inline styles on mobile
+  //   for ( var i=0; i < draggableElems.length; i++ ) {
+  //     if (draggableElems[i].style && !draggableElems[i].dataset.style) {
+  //       // save a backup of styles
+  //       draggableElems[i].dataset.style = draggableElems[i].getAttribute('style');
+  //     }
+  //     // erase styles
+  //     draggableElems[i].setAttribute('style', '');
+  //   }
+  // }
 
   // NOT MOBILE
-  else {
+  // else {
     var prev = false;
     // Make windows draggable if not mobile
     for ( var i=0; i < draggableElems.length; i++ ) {
-      var backup = draggableElems[i].dataset.style;
-      if (backup) {
-        draggableElems[i].setAttribute('style',backup);
-      }
+      // var backup = draggableElems[i].dataset.style;
+      // if (backup) {
+      //   draggableElems[i].setAttribute('style',backup);
+      // }
 
       var draggableElem = draggableElems[i];
       var draggie = new Draggabilly( draggableElem, {
@@ -130,5 +130,5 @@ function init(e) {
       });
       draggies.push( draggie );
     }
-  }
+  // }
 }
